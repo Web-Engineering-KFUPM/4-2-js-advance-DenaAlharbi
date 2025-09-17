@@ -63,8 +63,7 @@ Task:
 const courseTitles = { A101: "Intro", A201: "Data Structures" };
 
 for (const key in courseTitles) {
-    // key will be "A101", then "A201", ...
-    // value is courseTitles[key]
+    console.log(courseTitles[key]);
 }
 
 // =========================================
