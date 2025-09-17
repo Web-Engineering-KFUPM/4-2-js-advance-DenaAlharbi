@@ -109,6 +109,13 @@ Task:
 2) Use spread syntax with Math.min(...) and Math.max(...) to find extremes.
 3) Display both values.
 */
+//This part is from the readme but modified
+
+const nums = [1,200,3,5,6,-7,8,9,10,4];
+const min = Math.min(...nums);  // same as Math.min(10, 2, 30)
+const max = Math.max(...nums);
+console.log(max);
+console.log(min);
 
 // ===================================================================
 // TODO-6: EXCEPTIONS — try/catch/finally with EMPTY ARRAY edge case
