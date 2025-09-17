@@ -127,6 +127,8 @@ Task:
 3) Handle the error using try { ... } catch (e) { ... } finally { ... } and log messages
    in each block so you can see the flow of control.
 */
+//This part is from the readme but modified
+
 try {
     const x = maxF([]);   // This will throw
 } catch (e) {
@@ -152,5 +154,14 @@ Given: const words = ["ban", "babble", "make", "flab"];
 3) For matches, log "<word> matches!".
 4) Display the words that matches the pattern.
 */
+//This part is from the readme but modified
 
+const words = ["ban","babble", "make", "flab"];
+const RegExp = /ab/;
+
+words.forEach(w => {
+    if (RegExp.test(w)) {
+        console.log(`${w} matches!`);
+    }
+});
 // End of Advance JavaScript Lab — good luck!
