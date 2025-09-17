@@ -98,8 +98,8 @@ let date =d.getDate();      // Day of month: 1–31
 let month = d.getMonth();     // Month index: 0–11  (0 = January, 11 = December)
 let fullyear= d.getFullYear();  // 4-digit year, e.g., 2025
 console.log(fullyear);
-console.log(month);
-console.log("Today is the",date, "of the month:", month, "and the year:", fullyear);
+console.log(month);// we need to add 1 because it starts with zero
+console.log("Today is the",date, "of the month:", month+1, "and the year:", fullyear);
 // ============================================================
 // TODO-5: ARRAY + SPREAD — find MIN and MAX from 10 numbers
 // ============================================================
@@ -127,6 +127,19 @@ Task:
 3) Handle the error using try { ... } catch (e) { ... } finally { ... } and log messages
    in each block so you can see the flow of control.
 */
+try {
+    const x = maxF([]);   // This will throw
+} catch (e) {
+    console.log("error");
+} finally {
+    console.log("Done if error or no error");
+}
+function maxF(arr) {
+    if (!Array.isArray(arr) || arr.length === 0) {
+        throw new Error("Array must be non-empty.");
+    }
+    return arr[0];
+}
 
 // ===================================================================================
 // TODO-7: REGEX + forEach — find words containing 'ab' and log matches from the list
