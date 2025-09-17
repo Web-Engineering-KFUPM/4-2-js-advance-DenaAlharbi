@@ -21,6 +21,34 @@ Task:
 3) Add a setter updateGpa(newGpa) or use a set accessor for gpa that validates 0.0–4.0.
 4) Create an instance/object and output its attributes using the getter(s).
 */
+//This part is taken from the readme but modified
+const Student = {
+    firstname: "Ada",
+    lastname: "Lovelace",
+    _gpa: 3.8,
+    get fullName() {
+        return this.firstname + " " + this.lastname;
+    },
+    get gpa() {
+        return this._gpa;
+    },
+    set updateGpa(value) {
+        if (value >= 0 && value <= 4) {
+            this._gpa = value;
+        }
+    }
+};
+
+studenttest = Student;
+studenttest.firstname = "Dena";
+studenttest.lastname = "Alharbi";
+
+console.log(studenttest.gpa);
+console.log(studenttest.fullName);
+
+
+
+// Use like normal properties: person.fullName; person.gpa; person.gpa = 3.9;
 
 // ====================================
 // TODO-2: OBJECT AS MAP + for...in LOOP
@@ -30,6 +58,14 @@ Task:
 1) Make an object used as a "map" (key → value), e.g., course codes → titles.
 2) Iterate over it with for...in and display each key and value.
 */
+//This part is taken from the readme but modified
+
+const courseTitles = { A101: "Intro", A201: "Data Structures" };
+
+for (const key in courseTitles) {
+    // key will be "A101", then "A201", ...
+    // value is courseTitles[key]
+}
 
 // =========================================
 // TODO-3: STRING OBJECT — charAt() & length
