@@ -38,7 +38,6 @@ const Student = {
         }
     }
 };
-
 studenttest = Student;
 studenttest.firstname = "Dena";
 studenttest.lastname = "Alharbi";
@@ -63,6 +62,7 @@ Task:
 const courseTitles = { A101: "Intro", A201: "Data Structures" };
 
 for (const key in courseTitles) {
+    console.log(key);
     console.log(courseTitles[key]);
 }
 
@@ -74,6 +74,14 @@ Task:
 1) Create a String object or plain string.
 2) Use .charAt(index) and .length to output characters and size.
 */
+const str = "I AM DENA ALHARBI";
+let l= str.length;
+let c=str.charAt(0);
+str.charAt(4);
+console.log(str);
+console.log(l);
+console.log("Char at 4",c);
+
 
 // ===================================
 // TODO-4: DATE — day, month, and year
